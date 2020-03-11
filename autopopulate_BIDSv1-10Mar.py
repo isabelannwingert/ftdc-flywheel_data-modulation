@@ -93,9 +93,7 @@ for k, v in ser_mod_pairs.items():
     for w in range(len(parent_folders)):
         print("The ", k, "image will be labeled as ", v, "and will be put in the ", parent_folders[w])
 
-    # -------------------------------------------
-
-
+# -------------------------------------------
 # INFO DICTIONARY FUNCTION FOR CURATION
 # -------------------------------------------
 
@@ -207,6 +205,7 @@ def infotodict(seqinfo):
 # --- Illegal characters are also not allowed in the session names, same string modification is applied to the session ID before curation and conversion into the BIDS Filename
 def ReplaceSession(sesname):
     return sesname.replace("-", "x").replace("_", "x")
+
 
 
 
