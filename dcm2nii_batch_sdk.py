@@ -9,8 +9,7 @@ Created on Wed Apr 15 2020
 """
 dcm2nii_batch-sdk.py
 
-this is a batch script for running the dicom to nifti converter gear on ENTIRE session pool 
-in a project of dicoms. User will be prompted to enter whether or not they have a list of subjects 
+this is a batch script for running the dicom to nifti converter gear batchwise. User will be prompted to enter whether or not they have a list of subjects 
 and respective sessions they want to run dcm2niix on, or run the gear on the entire project.
 
 """
@@ -104,12 +103,6 @@ jobs = proposal.run()
 
 # goals for this script:
 # (1) Find ways to indicate progress in the script
-
-# from alive_progress import alive_bar
-# import time
-
-# with alive_bar(len(jobs)) as bar:
-#     for i in jobs:
-#         bar()
-#         time.sleep(1)
+# (2) Have user input gear they want to run and have this act as a wrapper?
+# (3) Specify configurations after proposing gear?
 
