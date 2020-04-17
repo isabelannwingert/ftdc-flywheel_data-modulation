@@ -108,3 +108,7 @@ jobs = proposal.run()
 # (2) Have user input gear they want to run and have this act as a wrapper?
 # (3) Specify configurations after proposing gear?
 
+
+
+
+# 17, Apr 2020
