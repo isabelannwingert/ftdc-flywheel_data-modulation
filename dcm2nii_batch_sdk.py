@@ -9,8 +9,9 @@ Created on Wed Apr 15 2020
 """
 dcm2nii_batch-sdk.py
 
-this is a batch script for running the dicom to nifti converter gear batchwise. User will be prompted to enter whether or not they have a list of subjects 
-and respective sessions they want to run dcm2niix on, or run the gear on the entire project.
+This is a batch script for running the dicom to nifti converter gear batchwise. User will be prompted to enter whether or not they have a list of subjects 
+and respective sessions they want to run dcm2niix on, or run the gear on the entire project. List should be Excel sheet of two columns with session and subject label.
+Example is provided under "HCP_task_fmri.xlsx" on master branch.
 
 """
 
@@ -45,10 +46,11 @@ project = fw.get(project_id)
 
 # prompting user again for accessing the input list (.xlsx)
 # list is a two column excel sheet of subject labels and sessions
+# example is provided under "HCP_task_fmri.xlsx" on master branch.
 # pandas package reads in excel sheet as data frame
 # terminal will print out three columns: session hash-ids and labels, session label, and subject label
-# end goal of loop is to create a list of hash-ids for sessions to access all acquisitions
-# Under 'if' = specified subjects taken into consideration for fw.lookup(path)
+# end goal of loop is to create a list of hash-ids for sessions in order to access all acquisitions
+# Under 'if' = specified subjects taken into consideration for fw.lookup('path')
 # Under 'else' = all sessions accessed right away
 input_prompt = input("Do you have a list of subjects that you want to run the dcm2niix gear on? Please type 'yes' or press enter if no: ")
 if input_prompt == "yes":
